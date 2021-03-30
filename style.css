@@ -1,7 +1,294 @@
+body
+{
+	background: #292929;
+	color: #fff;
+    background-image: url("https://www.desktopbackground.org/p/2015/04/09/930360_up-movie-wallpapers-wallpapers-zone_1920x1080_h.jpg");
+    background-size: 100% 25%;
+}
+
 #menu
 {
 	position: fixed;
 	width: 100%;
 	height: 35px;
-	background: white;
+	margin: 0;
+    background-color: #292929;
+    overflow: hidden;
+    z-index:1;
 }
+nav
+{
+    position: absolute;
+    top: 2.7%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+	background: #292929;
+	
+}
+
+nav a
+{
+    position: relative;
+    width: 14.28571429%;
+    display: table-cell;
+    text-align: center;
+    color: #b9b9b9;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: 0.2s ease color;
+}
+
+nav a:before, nav a:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before
+{
+    top: 2px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+}
+
+nav a:after
+{
+    top: 10px;
+    left: 20px;
+    width: 8px;
+    height: 8px
+}
+
+nav a:nth-child(1):before
+{
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after
+{
+    background-color: red;
+}
+
+nav a:nth-child(2):before
+{
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after
+{
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before
+{
+    background-color: purple;
+}
+
+nav a:nth-child(3):after
+{
+    background-color: palevioletred;
+}
+nav a:nth-child(4):before
+{
+    background-color: blue;
+}
+
+nav a:nth-child(4):after
+{
+    background-color: cyan;
+}
+nav a:nth-child(5):before
+{
+    background-color: orange;
+}
+
+nav a:nth-child(5):after
+{
+    background-color: orangered;
+}
+nav a:nth-child(6):before
+{
+    background-color: green;
+}
+
+nav a:nth-child(6):after
+{
+    background-color: greenyellow;
+}
+nav a:nth-child(7):before
+{
+    background-color: gold;
+}
+
+nav a:nth-child(7):after
+{
+    background-color: silver;
+}
+
+#indicator
+{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover
+{
+    color: #fff;
+}
+
+nav a:hover:before, nav a:hover:after
+{
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator
+{
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator
+{
+    left: 34%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator
+{
+    left: 70%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  z-index: 125;
+}
+
+h1{
+    font-family: Arial;
+    font-size: 30px;
+    position: center;
+    text-underline-offset: 2px;
+    text-align: center;
+    background-image: repeating-linear-gradient(230deg, transparent, transparent 19px, slateblue 24px);
+    background-color: #292929;
+    -webkit-text-underline-position: under;
+    text-underline-position: under;
+    border-bottom-style: outset;
+    border-bottom-color: slateblue;
+    border-bottom-width: 7px;
+    border-radius: 25px;
+}
+h2{
+    font-family: comic;
+    font-size: 24px;
+    position: center;
+    text-align: center;
+}
+.qr{
+    position: center;
+    text-align: center;
+}
+
+.myPhotos{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+
+    
+  }
+  .column{
+    flex-basis: 1 10px;
+    width: calc(100% / 4 - 10px);
+    margin: 5px;
+    padding: 0;
+  }
+  figure {
+    position: relative; 
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(.8);
+  }
+  figure img{
+    width: 100%;
+    height: 100%;
+
+  }
+  figure::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(0,0,0,.2);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  figure:hover{
+    animation: bloom ease-in-out .75s forwards;
+  }
+  figure:hover::before {
+    animation: circle .75s;
+  }
+  @keyframes bloom {
+    0% {
+      filter: grayscale(.8);
+    }
+    40% {
+      filter: grayscale(.5);
+    }
+    100% {
+      filter: grayscale(0);
+    }
+  }
+  @keyframes circle {
+    0% {
+      opacity: .5;
+      background: rgba(213,156,34,.2);
+      
+    }
+    40% {
+      opacity: 1;
+      background: rgba(213,34,160,.2);
+    }
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+
