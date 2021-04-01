@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset='utf-8'>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -150,14 +151,87 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <h1>contact me</h1>
 <br/>
 <br/>
+<div class="emailToMe">
+<h3>If you want to contact me please enter the next details</h3>
 <br/>
+<br/>
+<form method="post" action="mailto:tomervar@post.bgu.ac.il">
+  <label for="fullName">Full Name :</label>
+  <input type="text" id="fullName" name="name" placeholder="Full Name"/>
+  <br/>
+  <br/>
+  <label for="phone">phone number:</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+  <br/>
+  <br/>
+  <div class="textPlusEmojis">
+  <textarea id="MessageContent" name="content" placeholder="Enter your message here" rows="8" cols="60"></textarea>
+  <div class="emojiPicker">
+      <div class="emojis">
+        <div class="emojiFrame" id="1" onclick="placeEmoji(this.id)">&#128540</div>
+        <div class="emojiFrame" id="2" onclick="placeEmoji(this.id)" >&#128513</div>
+        <div class="emojiFrame" id="3" onclick="placeEmoji(this.id)" >&#128514</div>
+        <div class="emojiFrame" id="4" onclick="placeEmoji(this.id)" >&#128515</div>
+        <div class="emojiFrame" id="5" onclick="placeEmoji(this.id)" >&#128516</div>
+        <div class="emojiFrame" id="6" onclick="placeEmoji(this.id)" >&#128517</div>
+        <div class="emojiFrame" id="7" onclick="placeEmoji(this.id)" >&#129315</div>
+        <div class="emojiFrame" id="8" onclick="placeEmoji(this.id)" >&#128518</div>
+        <div class="emojiFrame" id="9" onclick="placeEmoji(this.id)" >&#128523</div>
+        <div class="emojiFrame" id="10" onclick="placeEmoji(this.id)" >&#128522</div>
+        <div class="emojiFrame" id="11" onclick="placeEmoji(this.id)" >&#128521</div>
+        <div class="emojiFrame" id="12" onclick="placeEmoji(this.id)" >&#128518</div>
+        <div class="emojiFrame" id="13" onclick="placeEmoji(this.id)" >&#128526</div>
+        <div class="emojiFrame" id="14" onclick="placeEmoji(this.id)" >&#128536</div>
+        <div class="emojiFrame" id="15" onclick="placeEmoji(this.id)" >&#128525</div>
+        <div class="emojiFrame" id="16" onclick="placeEmoji(this.id)" >&#128538</div>
+        <div class="emojiFrame" id="17" onclick="placeEmoji(this.id)" >&#129303</div>
+        <div class="emojiFrame" id="18" onclick="placeEmoji(this.id)" >&#128529</div>
+        <div class="emojiFrame" id="19" onclick="placeEmoji(this.id)" >&#128580</div>
+        <div class="emojiFrame" id="20" onclick="placeEmoji(this.id)" >&#128549</div>
+        <div class="emojiFrame" id="21" onclick="placeEmoji(this.id)" >&#129296</div>
+        <div class="emojiFrame" id="22" onclick="placeEmoji(this.id)" >&#128564</div>
+        <div class="emojiFrame" id="23" onclick="placeEmoji(this.id)" >&#129299</div>
+        <div class="emojiFrame" id="24" onclick="placeEmoji(this.id)" >&#128540</div>
+        <div class="emojiFrame" id="25" onclick="placeEmoji(this.id)" >&#129316</div>
+        <div class="emojiFrame" id="26" onclick="placeEmoji(this.id)" >&#129297</div>
+        <div class="emojiFrame" id="27" onclick="placeEmoji(this.id)" >&#128548</div>
+        <div class="emojiFrame" id="28" onclick="placeEmoji(this.id)" >&#128557</div>
+        <div class="emojiFrame" id="29" onclick="placeEmoji(this.id)" >&#128552</div>
+        <div class="emojiFrame" id="30" onclick="placeEmoji(this.id)" >&#128561</div>
+        <div class="emojiFrame" id="31" onclick="placeEmoji(this.id)" >&#128519</div>
+        <div class="emojiFrame" id="32" onclick="placeEmoji(this.id)" >&#128169</div>
+        <div class="emojiFrame" id="33" onclick="placeEmoji(this.id)" >&#128116</div>
+        <div class="emojiFrame" id="34" onclick="placeEmoji(this.id)" >&#128170</div>
+        <div class="emojiFrame" id="35" onclick="placeEmoji(this.id)" >&#128077</div>
+        <div class="emojiFrame" id="36" onclick="placeEmoji(this.id)" >&#127828</div>
+        <div class="emojiFrame" id="37" onclick="placeEmoji(this.id)" >&#127839</div>
+        <div class="emojiFrame" id="38" onclick="placeEmoji(this.id)" >&#127829</div>
+        <div class="emojiFrame" id="39" onclick="placeEmoji(this.id)" >&#127790</div>
+        <div class="emojiFrame" id="40" onclick="placeEmoji(this.id)" >&#129369</div>
+        <div class="emojiFrame" id="41" onclick="placeEmoji(this.id)" >&#127867</div>
+        <div class="emojiFrame" id="42" onclick="placeEmoji(this.id)" >&#128644</div>
+        <div class="emojiFrame" id="43" onclick="placeEmoji(this.id)" >&#128652</div>
+        <div class="emojiFrame" id="44" onclick="placeEmoji(this.id)" >&#128640</div>
+      </div>
+      <script>
+        function placeEmoji(id) {            
+          let text = document.getElementById("MessageContent");  
+          
+          text.value = text.value + document.getElementById(id).innerHTML;
+        }
+      </script>        
+  </div>
+  </div>
+  <br/>
+  <br/>
+  <input type="submit" value="send">
+  <input type="reset">
+</form>
+</div>
 </section>
 
 
@@ -173,6 +247,9 @@ $(function(){
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
+ </script>
+ <script type="text/javascript">
+
  </script>
 </body>
 </html>
