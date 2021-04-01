@@ -216,7 +216,7 @@ h2{
     position: center;
     text-align: center;
     background-image: url("https://csgstories.files.wordpress.com/2009/12/paradise-falls-01.jpg");
-    background-size: 100% ;
+    background-size: 100% 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:papayawhip;
 }
