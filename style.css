@@ -232,8 +232,24 @@ h2{
     position: center;
     text-align: center;
 }
-
-
+.q_and_a{
+  position: center;
+  text-align: center;
+}
+.q_and_aTable{
+  display: table;
+  background-color:beige;
+  color: #000;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 3px;
+}
+.useCase{
+  background-color:beige;
+  color: #000;
+  position: center;
+  text-align: center;
+}
 .myPhotos{
     display: flex;
     flex-flow: row wrap;
